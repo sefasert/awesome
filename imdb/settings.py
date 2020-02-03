@@ -25,7 +25,7 @@ SECRET_KEY = '7@j1!o)c8t8hwt0nbwso&z1nb^j8*7k8e*8qki^2=i@hwez$xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] #heroku host tüm site için *
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'movie',
+    'denemem'
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #heroku'da static dosyalar gözükmesi için
 ]
 
 ROOT_URLCONF = 'imdb.urls'
